@@ -2,7 +2,7 @@
 #include <QApplication>
 #include <QHBoxLayout>
 #include <QSlider>
-#include <QSpingBox>
+#include <QSpinBox>
 
 int main(int argc, char *argv[])
 {
