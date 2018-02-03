@@ -3,7 +3,7 @@
 
 //FindDialog constructor
 FindDialog::FindDialog(QWidget *parent) :
-    QMainWindow(parent),
+    QMainWindow(parent)
 {
     label = new QLabel(tr("Find &what:"));
     lineEdit = new QLineEdit;

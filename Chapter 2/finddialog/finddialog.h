@@ -15,7 +15,6 @@ class FindDialog : public QDialog
 public:
     //add FindDialog constructor
     explicit FindDialog(QWidget *parent = 0);
-    ~finddialog();
 signals:
     void findNext(const QString &str, Qt::CaseSensitivity cs);
     void findPrevious(const QString &str, Qt::CaseSensitivity cs);
