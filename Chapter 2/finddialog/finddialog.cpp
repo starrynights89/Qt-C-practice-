@@ -42,4 +42,6 @@ FindDialog::FindDialog(QWidget *parent) :
     mainLayout->addLayout(leftLayout);
     mainLayout->addLayout(rightLayout);
     setLayout(mainLayout);
+    setWindowTitle(tr("Find"));
+    setFixedHeight(sizeHint().height());
 }
