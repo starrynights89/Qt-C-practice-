@@ -3,9 +3,8 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    finddialog w;
-    w.show();
-
-    return a.exec();
+    QApplication app(argc, argv);
+    finddialog *dialog = new finddialog;
+    dialog->show();
+    return app.exec();
 }
