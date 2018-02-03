@@ -1,35 +1,22 @@
 #ifndef FINDDIALOG_H
 #define FINDDIALOG_H
 
-#include <QDialog>
+#include <QMainWindow>
 
-class QCheckBox;
-class QLabel;
-class QLineEdit;
-class QPushButton;
+namespace Ui {
+class finddialog;
+}
 
-class FindDialog : public QDialog
+class finddialog : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    //add FindDialog constructor
-    explicit FindDialog(QWidget *parent = 0);
-signals:
-    void findNext(const QString &str, Qt::CaseSensitivity cs);
-    void findPrevious(const QString &str, Qt::CaseSensitivity cs);
+    explicit finddialog(QWidget *parent = 0);
+    ~finddialog();
 
-private slots:
-    void findClicked();
-    void enableFindButton(const QString &text);
-    
 private:
-    QLabel *label;
-    QLineEdit *lineEdit;
-    QCheckBox *caseCheckBox;
-    QCheckBox *backwardCheckBox;
-    QPushButton *findButton;
-    QPushButton *closeButton;
+    Ui::finddialog *ui;
 };
 
 #endif // FINDDIALOG_H
