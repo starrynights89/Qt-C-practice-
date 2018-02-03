@@ -2,8 +2,8 @@
 #include "ui_finddialog.h"
 #include <QtGui>
 
-finddialog::finddialog(QWidget *parent) :
-    QMainWindow(parent),
+finddialog::finddialog(QWidget *parent) 
+    : QDialog(parent),
     ui(new Ui::finddialog)
 {
     ui->setupUi(this);
