@@ -18,8 +18,3 @@ FindDialog::FindDialog(QWidget *parent) :
 
     closeButton = new QPushButton(tr("Close"));
 }
-
-finddialog::~finddialog()
-{
-    delete ui;
-}
