@@ -1,6 +1,7 @@
 #include "finddialog.h"
 #include <QtGui>
 
+//FindDialog constructor
 FindDialog::FindDialog(QWidget *parent) :
     QMainWindow(parent),
 {
@@ -44,4 +45,25 @@ FindDialog::FindDialog(QWidget *parent) :
     setLayout(mainLayout);
     setWindowTitle(tr("Find"));
     setFixedHeight(sizeHint().height());
+}
+
+void FindDialog::findClicked()
+{
+    QString text = lineEdit->text();
+    Qt::CaseSensitivity cs = 
+            caseCheckBox->isChecked() ? Qt::CaseSensitive
+                                      : Qt::CaseInsensitive;
+    if (backwardCheckBox->isChecked())
+    {
+        emit findPrevious(text, cs);
+    }
+    else
+    {
+        emit findNext(text, cs);
+    }
+}
+
+void FindDialog::enableFindButton(const QString &text)
+{
+    findButton->setEnabled(!text.isEmpty());
 }
