@@ -2,19 +2,27 @@
 #define FINDDIALOG_H
 
 #include <QMainWindow>
+#include <QDialog>
+
+class QCheckBox;
+class QLabel;
+class QLineEdit;
+class QPushButton;
 
 namespace Ui {
-class finddialog;
+class FindDialog;
 }
 
-class finddialog : public QMainWindow
+class FindDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit finddialog(QWidget *parent = 0);
+    //add FindDialog constructor
+    explicit FindDialog(QWidget *parent = 0);
     ~finddialog();
-
+signals:
+    
 private:
     Ui::finddialog *ui;
 };
