@@ -1,7 +1,6 @@
 #ifndef FINDDIALOG_H
 #define FINDDIALOG_H
 
-#include <QMainWindow>
 #include <QDialog>
 
 class QCheckBox;
