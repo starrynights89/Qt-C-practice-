@@ -8,11 +8,7 @@ class QLabel;
 class QLineEdit;
 class QPushButton;
 
-namespace Ui {
-class finddialog;
-}
-
-class finddialog : public QDialog
+class FindDialog : public QDialog
 {
     Q_OBJECT
 
