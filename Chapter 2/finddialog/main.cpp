@@ -4,7 +4,7 @@
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    finddialog *dialog = new finddialog;
+    FindDialog *dialog = new Findialog;
     dialog->show();
     return app.exec();
 }
