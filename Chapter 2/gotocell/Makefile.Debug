@@ -216,6 +216,11 @@ debug/moc_gotocelldialog.cpp: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QDialog 
 		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.10.0/mingw53_32/include/QtGui/qguiapplication.h \
 		C:/Qt/5.10.0/mingw53_32/include/QtGui/qinputmethod.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QPushButton \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtGui/qicon.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QWidget \
 		gotocelldialog.h \
 		debug/moc_predefs.h \
 		C:/Qt/5.10.0/mingw53_32/bin/moc.exe
@@ -704,7 +709,8 @@ debug/gotocelldialog.o: gotocelldialog.cpp C:/Qt/5.10.0/mingw53_32/include/QtWid
 		gotocelldialog.h \
 		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QDialog \
 		ui_gotocelldialog.h \
-		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QApplication
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QApplication \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QPushButton
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\gotocelldialog.o gotocelldialog.cpp
 
 debug/main.o: main.cpp C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QApplication \
@@ -819,7 +825,12 @@ debug/main.o: main.cpp C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QApplication \
 		gotocelldialog.h \
 		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QDialog \
 		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qdialog.h \
-		ui_gotocelldialog.h
+		ui_gotocelldialog.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QPushButton \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtGui/qicon.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o main.cpp
 
 debug/moc_gotocelldialog.o: debug/moc_gotocelldialog.cpp 
