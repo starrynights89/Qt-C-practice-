@@ -2,6 +2,7 @@
 
 #include "gotocelldialog.h"
 
+//add constructor
 GoToCellDialog::GoToCellDialog(QWidget *parent)
     : QDialog(parent)
 {
