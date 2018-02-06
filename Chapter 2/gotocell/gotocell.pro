@@ -10,7 +10,7 @@ SOURCES = \
    $$PWD/main.cpp
 
 FORMS += \
-   gotocelldialog.ui
+        gotocelldialog.ui
 
 INCLUDEPATH =
 
