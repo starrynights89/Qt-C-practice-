@@ -1,0 +1,2 @@
+#ifndef GOTOCELLDIALOG_H
+#define GOTOCELLDIALOG_H

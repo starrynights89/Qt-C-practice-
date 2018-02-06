@@ -19,7 +19,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 # Input
 HEADERS += \
-        ui_gotocelldialog.h
+        ui_gotocelldialog.h \
+        gotocelldialog.h
 
 FORMS += \
         gotocelldialog.ui
