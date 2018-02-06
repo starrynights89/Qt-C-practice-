@@ -3,11 +3,12 @@
 
 #TARGET = gotocell
 
-HEADERS =
+
 
 SOURCES = \
-   $$PWD/gotocelldialog.ui \
-   $$PWD/main.cpp
+   main.cpp
+
+HEADERS =
 
 FORMS += \
         gotocelldialog.ui
