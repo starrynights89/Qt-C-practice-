@@ -4,7 +4,8 @@
 #include <QDialog>
 #include "ui_gotocelldialog.h"
 
-class GoToCellDialog : public QDialog, public Ui::GoToCellDialog
+class GoToCellDialog : public QDialog,
+public Ui::GoToCellDialog
 {
     Q_OBJECT
 
