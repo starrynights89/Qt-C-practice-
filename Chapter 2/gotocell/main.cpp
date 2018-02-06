@@ -1,12 +1,11 @@
-#include <QApplication>
-
 #include "gotocelldialog.h"
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
-    GoToCellDialog *dialog = new GoToCellDialog;
-    dialog->show();
+    QApplication a(argc, argv);
+    gotocelldialog w;
+    w.show();
 
-    return app.exec();
+    return a.exec();
 }
