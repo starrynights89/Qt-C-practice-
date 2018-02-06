@@ -1,3 +1,5 @@
+#include <QApplication>
+
 class Ui::GoToCellDialog
 {
 puiblic:
@@ -6,7 +8,7 @@ puiblic:
     QSpacerItem *spacerItem;
     QPushButton *okButton;
     QPushButton *cancelButton;
-     
+
     void setupUi(QWidget *widget)
     {
     }
