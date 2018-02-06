@@ -9,6 +9,9 @@ SOURCES = \
    $$PWD/gotocelldialog.ui \
    $$PWD/main.cpp
 
+FORMS += \
+   gotocelldialog.ui
+
 INCLUDEPATH =
 
 #DEFINES = 
