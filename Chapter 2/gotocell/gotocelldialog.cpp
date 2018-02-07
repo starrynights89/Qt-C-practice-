@@ -3,9 +3,10 @@
 #include <QtWidgets>
 
 GoToCellDialog::GoToCellDialog(QWidget *parent) :
-    QDialog(parent)
+    QDialog(parent),
+ui(mew Ui::GoToCellDialog)
 {
-   setupUi(this);
+   ui->setupUi(this);
    buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
 
    QRegExp regExp("[A-Za-z][1-9][0-9]{0,2}");
