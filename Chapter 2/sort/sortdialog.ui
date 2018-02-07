@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>267</width>
+    <width>287</width>
     <height>298</height>
    </rect>
   </property>
@@ -287,6 +287,17 @@
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>comboBox</tabstop>
+  <tabstop>comboBox_2</tabstop>
+  <tabstop>comboBox_7</tabstop>
+  <tabstop>comboBox_8</tabstop>
+  <tabstop>comboBox_9</tabstop>
+  <tabstop>comboBox_10</tabstop>
+  <tabstop>okButton</tabstop>
+  <tabstop>cancelButton</tabstop>
+  <tabstop>moreButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
