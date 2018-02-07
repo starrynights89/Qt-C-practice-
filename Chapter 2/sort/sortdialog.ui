@@ -299,5 +299,42 @@
   <tabstop>moreButton</tabstop>
  </tabstops>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>okButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SortDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>117</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SortDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>223</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>222</x>
+     <y>128</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>accept()</slot>
+  <slot>reject()</slot>
+ </slots>
 </ui>
