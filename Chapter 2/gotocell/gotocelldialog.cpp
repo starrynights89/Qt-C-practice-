@@ -1,23 +1,14 @@
 #include "gotocelldialog.h"
+#include "ui_gotocelldialog.h"
 
-#include <QtWidgets>
-
-GoToCellDialog::GoToCellDialog(QWidget *parent) :
-    QDialog(parent),
-ui(new Ui::GoToCellDialog)
+gotocelldialog::gotocelldialog(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::gotocelldialog)
 {
-   setupUi(this);
-   buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-
-   QRegExp regExp("[A-Za-z][1-9][0-9]{0,2}");
-   lineEdit->setValidator(new QRegExpValidator(regExp, this));
-
-   connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-   connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    ui->setupUi(this);
 }
 
-void GoToCellDialog::on_lineEdit_textChanged()
+gotocelldialog::~gotocelldialog()
 {
-    buttonBox->button(QDialogButtonBox::Ok)->setEnabled(
-            lineEdit->hasAcceptableInput());
+    delete ui;
 }
