@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SortDialog</class>
- <widget class="QWidget" name="SortDialog">
+ <class>Sort</class>
+ <widget class="QWidget" name="Sort">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -303,7 +303,7 @@
   <connection>
    <sender>okButton</sender>
    <signal>clicked()</signal>
-   <receiver>SortDialog</receiver>
+   <receiver>Sort</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -319,7 +319,7 @@
   <connection>
    <sender>cancelButton</sender>
    <signal>clicked()</signal>
-   <receiver>SortDialog</receiver>
+   <receiver>Sort</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

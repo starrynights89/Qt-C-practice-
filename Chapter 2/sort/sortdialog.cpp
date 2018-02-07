@@ -1,4 +1,5 @@
 #include "sortdialog.h"
+#include "ui_sortdialog.h"
 
 #include <QtWidgets>
 
@@ -21,17 +22,17 @@ void SortDialog::setColumnRange(QChar first, QChar last)
     ui->secondaryColumnCombo->clear();
     ui->tertiaryColumnCombo->clear();
 
-    secondaryColumnCombo->addItem(tr("None"));
-    tertiaryColumnCombo->addItem(tr("None"));
-    primaryColumnCombo->setMinimumSize(
-            secondaryColumnCombo->sizeHint());
+    ui->secondaryColumnCombo->addItem(tr("None"));
+    ui->tertiaryColumnCombo->addItem(tr("None"));
+    ui->primaryColumnCombo->setMinimumSize(
+            ui->secondaryColumnCombo->sizeHint());
     
     QChar ch = first;
     while(ch <= last)
     {
-        primaryColumnCombo->addItem(QString(ch));
-        secondaryColumnCombo->addItem(QString(ch));
-        tertiaryColumnCombo->addItem(QString(ch));
+        ui->primaryColumnCombo->addItem(QString(ch));
+        ui->secondaryColumnCombo->addItem(QString(ch));
+        ui->tertiaryColumnCombo->addItem(QString(ch));
         ch = ch.unicode() + 1;
     }
 }
