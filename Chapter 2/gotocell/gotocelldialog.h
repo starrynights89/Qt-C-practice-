@@ -3,7 +3,7 @@
 
 #include <QDialog>
 
-class GoToCellDialog : public QDialog, public Ui::GoToCellDialog
+class GoToCellDialog : public QDialog
 {
     Q_OBJECT
 

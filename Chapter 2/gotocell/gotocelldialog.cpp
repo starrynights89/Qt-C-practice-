@@ -1,7 +1,6 @@
 #include "gotocelldialog.h"
-#include "ui_gotocelldialog.h"
 
-#include <QtWidget>
+#include <QtWidgets>
 
 GoToCellDialog::GoToCellDialog(QWidget *parent) :
     QDialog(parent)
