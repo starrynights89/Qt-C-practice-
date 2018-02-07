@@ -1,5 +1,7 @@
 #include "gotocelldialog.h"
+#include "ui_gotocelldialog.h"
 #include <QApplication>
+#include <QDialog>
 
 int main(int argc, char *argv[])
 {
