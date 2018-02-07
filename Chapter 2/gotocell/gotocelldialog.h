@@ -7,7 +7,7 @@
 #include "ui_gotocelldialog.h"
 
 namespace Ui {
-class gotocelldialog;
+class GoToCellDialog;
 }
 
 class GoToCellDialog : public QDialog, public Ui::GoToCellDialog
@@ -16,11 +16,11 @@ class GoToCellDialog : public QDialog, public Ui::GoToCellDialog
 
 public:
     explicit GoToCellDialog(QWidget *parent = 0);
-    ~gotocelldialog();
+    ~GoToCellDialog();
 private slots:
     void on_lineEdit_textChanged();
 private:
-    Ui::gotocelldialog *ui;
+    Ui::GoToCellDialog *ui;
 };
 
 #endif // GOTOCELLDIALOG_H

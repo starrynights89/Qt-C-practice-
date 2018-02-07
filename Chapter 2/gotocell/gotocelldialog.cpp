@@ -20,7 +20,7 @@ void GoToCellDialog::on_lineEdit_textChanged()
     okButton->setEnabled(lineEdit->hasAcceptableInput());
 }
 
-gotocelldialog::~gotocelldialog()
+GoToCellDialog::~GoToCellDialog()
 {
     delete ui;
 }
