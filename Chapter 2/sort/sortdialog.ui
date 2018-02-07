@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>sortdialog</class>
- <widget class="QWidget" name="sortdialog">
+ <class>SortDialog</class>
+ <widget class="QWidget" name="SortDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>292</width>
-    <height>327</height>
+    <width>278</width>
+    <height>356</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>sortdialog</string>
+   <string>Sort</string>
   </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
@@ -102,8 +102,8 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>24</y>
+      <x>11</x>
+      <y>25</y>
       <width>39</width>
       <height>16</height>
      </rect>
@@ -115,9 +115,9 @@
    <widget class="QComboBox" name="comboBox_3">
     <property name="geometry">
      <rect>
-      <x>51</x>
+      <x>56</x>
       <y>25</y>
-      <width>71</width>
+      <width>51</width>
       <height>20</height>
      </rect>
     </property>
@@ -130,7 +130,7 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>12</x>
+      <x>11</x>
       <y>51</y>
       <width>32</width>
       <height>16</height>
@@ -143,9 +143,9 @@
    <widget class="QComboBox" name="comboBox_4">
     <property name="geometry">
      <rect>
-      <x>51</x>
+      <x>56</x>
       <y>51</y>
-      <width>101</width>
+      <width>81</width>
       <height>20</height>
      </rect>
     </property>
@@ -164,8 +164,8 @@
   <widget class="QGroupBox" name="groupBox_3">
    <property name="geometry">
     <rect>
-     <x>9</x>
-     <y>227</y>
+     <x>10</x>
+     <y>240</y>
      <width>172</width>
      <height>81</height>
     </rect>
