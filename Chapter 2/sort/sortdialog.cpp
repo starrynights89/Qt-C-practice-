@@ -9,8 +9,8 @@ SortDialog::SortDialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->secondaryGroupBox->hide();
-    ui->tertiaryGroupBox->hide();
+    secondaryGroupBox->hide();
+    tertiaryGroupBox->hide();
     layout()->setSizeConstraint(QLayout::SetFixedSize);
 
     setColumnRange('A', 'Z');
