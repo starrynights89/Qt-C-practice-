@@ -1,7 +1,6 @@
 #include "sortdialog.h"
-#include "ui_sortdialog.h"
 
-#include "sortdialog.h"
+#include <QtWidgets>
 
 SortDialog::SortDialog(QWidget *parent) : QWidget(parent)
 {
