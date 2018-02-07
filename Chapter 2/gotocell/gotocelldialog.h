@@ -2,19 +2,21 @@
 #define GOTOCELLDIALOG_H
 
 #include <QWidget>
+#include <QDialog>
 
 namespace Ui {
 class gotocelldialog;
 }
 
-class gotocelldialog : public QWidget
+class GoToCellDialog : public QDialog, public Ui::GoToCellDialog
 {
     Q_OBJECT
 
 public:
-    explicit gotocelldialog(QWidget *parent = 0);
+    explicit GoToCellDialog(QWidget *parent = 0);
     ~gotocelldialog();
-
+private slots:
+    void on_lineEdit_textChanged();
 private:
     Ui::gotocelldialog *ui;
 };
