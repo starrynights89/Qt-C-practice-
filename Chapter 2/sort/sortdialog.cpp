@@ -18,21 +18,21 @@ SortDialog::SortDialog(QWidget *parent) :
 
 void SortDialog::setColumnRange(QChar first, QChar last)
 {
-    ui->primaryColumnCombo->clear();
-    ui->secondaryColumnCombo->clear();
-    ui->tertiaryColumnCombo->clear();
+    primaryColumnCombo->clear();
+    secondaryColumnCombo->clear();
+    tertiaryColumnCombo->clear();
 
-    ui->secondaryColumnCombo->addItem(tr("None"));
-    ui->tertiaryColumnCombo->addItem(tr("None"));
-    ui->primaryColumnCombo->setMinimumSize(
-            ui->secondaryColumnCombo->sizeHint());
+    secondaryColumnCombo->addItem(tr("None"));
+    tertiaryColumnCombo->addItem(tr("None"));
+    primaryColumnCombo->setMinimumSize(
+            secondaryColumnCombo->sizeHint());
     
     QChar ch = first;
     while(ch <= last)
     {
-        ui->primaryColumnCombo->addItem(QString(ch));
-        ui->secondaryColumnCombo->addItem(QString(ch));
-        ui->tertiaryColumnCombo->addItem(QString(ch));
+        primaryColumnCombo->addItem(QString(ch));
+        secondaryColumnCombo->addItem(QString(ch));
+        tertiaryColumnCombo->addItem(QString(ch));
         ch = ch.unicode() + 1;
     }
 }
