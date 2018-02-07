@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QDialog>
 
+#include "ui_gotocelldialog.h"
+
 namespace Ui {
 class gotocelldialog;
 }
