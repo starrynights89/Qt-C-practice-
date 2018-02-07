@@ -3,9 +3,8 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    gotocelldialog w;
-    w.show();
-
-    return a.exec();
+    QApplication app(argc, argv);
+    GoToCellDialog *dialog = new GoToCellDialog;
+    dialog->show();
+    return app.exec();
 }
