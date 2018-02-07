@@ -3,7 +3,7 @@
 #include <QtWidgets>
 
 GoToCellDialog::GoToCellDialog(QWidget *parent) :
-    QWidget(parent),
+    QDialog(parent),
     ui(new Ui::GoToCellDialog)
 {
     ui->setupUi(this);
