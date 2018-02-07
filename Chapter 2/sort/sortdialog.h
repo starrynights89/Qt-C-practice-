@@ -12,7 +12,7 @@ class SortDialog : public QDialog, public Ui::SortDialog
 public:
     SortDialog(QWidget *parent = 0);
 
-    void setColumnRange(Qchar first, QChar last);
+    void setColumnRange(QChar first, QChar last);
 };
 
 #endif // SORTDIALOG_H
