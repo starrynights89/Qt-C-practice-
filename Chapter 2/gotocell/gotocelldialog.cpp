@@ -4,9 +4,9 @@
 
 GoToCellDialog::GoToCellDialog(QWidget *parent) :
     QDialog(parent),
-ui(mew Ui::GoToCellDialog)
+ui(new Ui::GoToCellDialog)
 {
-   ui->setupUi(this);
+   setupUi(this);
    buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
 
    QRegExp regExp("[A-Za-z][1-9][0-9]{0,2}");
