@@ -3,10 +3,9 @@
 #include <QtWidgets>
 
 GoToCellDialog::GoToCellDialog(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::GoToCellDialog)
+    QDialog(parent)
 {
-    ui->setupUi(this);
+    setupUi(this);
 
     QRegExp regExp("[A-Za-z][1-9][0-9]{0,2}");
     lineEdit->setValidator(new QRegExpValidator(regExp, this));
@@ -18,9 +17,4 @@ GoToCellDialog::GoToCellDialog(QWidget *parent) :
 void GoToCellDialog::on_lineEdit_textChanged()
 {
     okButton->setEnabled(lineEdit->hasAcceptableInput());
-}
-
-GoToCellDialog::~GoToCellDialog()
-{
-    delete ui;
 }
