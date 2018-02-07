@@ -2,7 +2,7 @@
 
 #include <QtWidgets>
 
-SortDialog::SortDialog(QWidget *parent) : QWidget(parent)
+SortDialog::SortDialog(QWidget *parent) : QDialog(parent)
 {
     setupUi(this);
 
