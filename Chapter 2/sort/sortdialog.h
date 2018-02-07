@@ -1,24 +1,22 @@
 #ifndef SORTDIALOG_H
 #define SORTDIALOG_H
 
-#include <QDialog>
-
-#include "ui_sortdialog.h"
+#include <QWidget>
 
 namespace Ui {
-class SortDialog;
+class sortdialog;
 }
 
-class SortDialog : public QDialog, public Ui::SortDialog
+class sortdialog : public QWidget
 {
     Q_OBJECT
 
 public:
-    SortDialog(QWidget *parent = 0);
-    void setColumnRange(QChar first, QChar last);
-    ~SortDialog();
+    explicit sortdialog(QWidget *parent = 0);
+    ~sortdialog();
+
 private:
-    Ui::SortDialog *ui;
+    Ui::sortdialog *ui;
 };
 
 #endif // SORTDIALOG_H
