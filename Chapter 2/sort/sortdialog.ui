@@ -86,7 +86,7 @@
        <string>Column:</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QComboBox" name="primaryColumnCombo">
       <property name="geometry">
        <rect>
         <x>51</x>
@@ -160,7 +160,7 @@
        <string>Column:</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox_9">
+     <widget class="QComboBox" name="tertiaryColumnCombo">
       <property name="geometry">
        <rect>
         <x>51</x>
@@ -234,7 +234,7 @@
        <string>Column:</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox_7">
+     <widget class="QComboBox" name="secondaryColumnCombo">
       <property name="geometry">
        <rect>
         <x>51</x>
@@ -288,11 +288,11 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
-  <tabstop>comboBox</tabstop>
+  <tabstop>primaryColumnCombo</tabstop>
   <tabstop>comboBox_2</tabstop>
-  <tabstop>comboBox_7</tabstop>
+  <tabstop>secondaryColumnCombo</tabstop>
   <tabstop>comboBox_8</tabstop>
-  <tabstop>comboBox_9</tabstop>
+  <tabstop>tertiaryColumnCombo</tabstop>
   <tabstop>comboBox_10</tabstop>
   <tabstop>okButton</tabstop>
   <tabstop>cancelButton</tabstop>
