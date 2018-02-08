@@ -3,11 +3,9 @@
 
 #include <QtWidgets>
 
-SortDialog::SortDialog(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::SortDialog)
+SortDialog::SortDialog(QWidget *parent) : QDialog(parent)
 {
-    ui->setupUi(this);
+    setupUi(this);
 
     secondaryGroupBox->hide();
     tertiaryGroupBox->hide();
@@ -35,8 +33,4 @@ void SortDialog::setColumnRange(QChar first, QChar last)
         tertiaryColumnCombo->addItem(QString(ch));
         ch = ch.unicode() + 1;
     }
-}
-SortDialog::~SortDialog()
-{
-    delete ui;
 }

@@ -37,17 +37,17 @@ public:
     QPushButton *moreButton;
     QGroupBox *groupBox;
     QLabel *label;
-    QComboBox *comboBox;
+    QComboBox *primaryColumnCombo;
     QLabel *label_2;
     QComboBox *comboBox_2;
     QGroupBox *tertiaryGroupBox;
     QLabel *label_9;
-    QComboBox *comboBox_9;
+    QComboBox *tertiaryColumnCombo;
     QLabel *label_10;
     QComboBox *comboBox_10;
     QGroupBox *secondaryGroupBox;
     QLabel *label_7;
-    QComboBox *comboBox_7;
+    QComboBox *secondaryColumnCombo;
     QLabel *label_8;
     QComboBox *comboBox_8;
 
@@ -95,10 +95,10 @@ public:
         label = new QLabel(groupBox);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(10, 24, 39, 16));
-        comboBox = new QComboBox(groupBox);
-        comboBox->addItem(QString());
-        comboBox->setObjectName(QStringLiteral("comboBox"));
-        comboBox->setGeometry(QRect(51, 25, 71, 20));
+        primaryColumnCombo = new QComboBox(groupBox);
+        primaryColumnCombo->addItem(QString());
+        primaryColumnCombo->setObjectName(QStringLiteral("primaryColumnCombo"));
+        primaryColumnCombo->setGeometry(QRect(51, 25, 71, 20));
         label_2 = new QLabel(groupBox);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(12, 51, 32, 16));
@@ -120,10 +120,10 @@ public:
         label_9 = new QLabel(tertiaryGroupBox);
         label_9->setObjectName(QStringLiteral("label_9"));
         label_9->setGeometry(QRect(10, 24, 39, 16));
-        comboBox_9 = new QComboBox(tertiaryGroupBox);
-        comboBox_9->addItem(QString());
-        comboBox_9->setObjectName(QStringLiteral("comboBox_9"));
-        comboBox_9->setGeometry(QRect(51, 25, 71, 20));
+        tertiaryColumnCombo = new QComboBox(tertiaryGroupBox);
+        tertiaryColumnCombo->addItem(QString());
+        tertiaryColumnCombo->setObjectName(QStringLiteral("tertiaryColumnCombo"));
+        tertiaryColumnCombo->setGeometry(QRect(51, 25, 71, 20));
         label_10 = new QLabel(tertiaryGroupBox);
         label_10->setObjectName(QStringLiteral("label_10"));
         label_10->setGeometry(QRect(12, 51, 32, 16));
@@ -145,10 +145,10 @@ public:
         label_7 = new QLabel(secondaryGroupBox);
         label_7->setObjectName(QStringLiteral("label_7"));
         label_7->setGeometry(QRect(10, 24, 39, 16));
-        comboBox_7 = new QComboBox(secondaryGroupBox);
-        comboBox_7->addItem(QString());
-        comboBox_7->setObjectName(QStringLiteral("comboBox_7"));
-        comboBox_7->setGeometry(QRect(51, 25, 71, 20));
+        secondaryColumnCombo = new QComboBox(secondaryGroupBox);
+        secondaryColumnCombo->addItem(QString());
+        secondaryColumnCombo->setObjectName(QStringLiteral("secondaryColumnCombo"));
+        secondaryColumnCombo->setGeometry(QRect(51, 25, 71, 20));
         label_8 = new QLabel(secondaryGroupBox);
         label_8->setObjectName(QStringLiteral("label_8"));
         label_8->setGeometry(QRect(12, 51, 32, 16));
@@ -160,11 +160,11 @@ public:
 
         gridLayout->addWidget(secondaryGroupBox, 2, 0, 1, 1);
 
-        QWidget::setTabOrder(comboBox, comboBox_2);
-        QWidget::setTabOrder(comboBox_2, comboBox_7);
-        QWidget::setTabOrder(comboBox_7, comboBox_8);
-        QWidget::setTabOrder(comboBox_8, comboBox_9);
-        QWidget::setTabOrder(comboBox_9, comboBox_10);
+        QWidget::setTabOrder(primaryColumnCombo, comboBox_2);
+        QWidget::setTabOrder(comboBox_2, secondaryColumnCombo);
+        QWidget::setTabOrder(secondaryColumnCombo, comboBox_8);
+        QWidget::setTabOrder(comboBox_8, tertiaryColumnCombo);
+        QWidget::setTabOrder(tertiaryColumnCombo, comboBox_10);
         QWidget::setTabOrder(comboBox_10, okButton);
         QWidget::setTabOrder(okButton, cancelButton);
         QWidget::setTabOrder(cancelButton, moreButton);
@@ -186,7 +186,7 @@ public:
         moreButton->setText(QApplication::translate("SortDialog", "&More", nullptr));
         groupBox->setTitle(QApplication::translate("SortDialog", "&Primary Key", nullptr));
         label->setText(QApplication::translate("SortDialog", "Column:", nullptr));
-        comboBox->setItemText(0, QApplication::translate("SortDialog", "None", nullptr));
+        primaryColumnCombo->setItemText(0, QApplication::translate("SortDialog", "None", nullptr));
 
         label_2->setText(QApplication::translate("SortDialog", "Order:", nullptr));
         comboBox_2->setItemText(0, QApplication::translate("SortDialog", "Ascending ", nullptr));
@@ -194,7 +194,7 @@ public:
 
         tertiaryGroupBox->setTitle(QApplication::translate("SortDialog", "&Tertiary Key", nullptr));
         label_9->setText(QApplication::translate("SortDialog", "Column:", nullptr));
-        comboBox_9->setItemText(0, QApplication::translate("SortDialog", "None", nullptr));
+        tertiaryColumnCombo->setItemText(0, QApplication::translate("SortDialog", "None", nullptr));
 
         label_10->setText(QApplication::translate("SortDialog", "Order:", nullptr));
         comboBox_10->setItemText(0, QApplication::translate("SortDialog", "Ascending ", nullptr));
@@ -202,7 +202,7 @@ public:
 
         secondaryGroupBox->setTitle(QApplication::translate("SortDialog", "&Secondary Key", nullptr));
         label_7->setText(QApplication::translate("SortDialog", "Column:", nullptr));
-        comboBox_7->setItemText(0, QApplication::translate("SortDialog", "None", nullptr));
+        secondaryColumnCombo->setItemText(0, QApplication::translate("SortDialog", "None", nullptr));
 
         label_8->setText(QApplication::translate("SortDialog", "Order:", nullptr));
         comboBox_8->setItemText(0, QApplication::translate("SortDialog", "Ascending ", nullptr));
