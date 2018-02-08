@@ -55,7 +55,7 @@ public:
     {
         if (SortDialog->objectName().isEmpty())
             SortDialog->setObjectName(QStringLiteral("SortDialog"));
-        SortDialog->resize(348, 298);
+        SortDialog->resize(199, 151);
         gridLayout = new QGridLayout(SortDialog);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
