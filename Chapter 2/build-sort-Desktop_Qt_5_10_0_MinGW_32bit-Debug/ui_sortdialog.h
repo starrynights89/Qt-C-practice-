@@ -40,12 +40,12 @@ public:
     QComboBox *comboBox;
     QLabel *label_2;
     QComboBox *comboBox_2;
-    QGroupBox *groupBox_3;
+    QGroupBox *tertiaryGroupBox;
     QLabel *label_9;
     QComboBox *comboBox_9;
     QLabel *label_10;
     QComboBox *comboBox_10;
-    QGroupBox *groupBox_2;
+    QGroupBox *secondaryGroupBox;
     QLabel *label_7;
     QComboBox *comboBox_7;
     QLabel *label_8;
@@ -110,55 +110,55 @@ public:
 
         gridLayout->addWidget(groupBox, 0, 0, 1, 1);
 
-        groupBox_3 = new QGroupBox(SortDialog);
-        groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
+        tertiaryGroupBox = new QGroupBox(SortDialog);
+        tertiaryGroupBox->setObjectName(QStringLiteral("tertiaryGroupBox"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(40);
-        sizePolicy.setHeightForWidth(groupBox_3->sizePolicy().hasHeightForWidth());
-        groupBox_3->setSizePolicy(sizePolicy);
-        label_9 = new QLabel(groupBox_3);
+        sizePolicy.setHeightForWidth(tertiaryGroupBox->sizePolicy().hasHeightForWidth());
+        tertiaryGroupBox->setSizePolicy(sizePolicy);
+        label_9 = new QLabel(tertiaryGroupBox);
         label_9->setObjectName(QStringLiteral("label_9"));
         label_9->setGeometry(QRect(10, 24, 39, 16));
-        comboBox_9 = new QComboBox(groupBox_3);
+        comboBox_9 = new QComboBox(tertiaryGroupBox);
         comboBox_9->addItem(QString());
         comboBox_9->setObjectName(QStringLiteral("comboBox_9"));
         comboBox_9->setGeometry(QRect(51, 25, 71, 20));
-        label_10 = new QLabel(groupBox_3);
+        label_10 = new QLabel(tertiaryGroupBox);
         label_10->setObjectName(QStringLiteral("label_10"));
         label_10->setGeometry(QRect(12, 51, 32, 16));
-        comboBox_10 = new QComboBox(groupBox_3);
+        comboBox_10 = new QComboBox(tertiaryGroupBox);
         comboBox_10->addItem(QString());
         comboBox_10->addItem(QString());
         comboBox_10->setObjectName(QStringLiteral("comboBox_10"));
         comboBox_10->setGeometry(QRect(51, 51, 101, 20));
 
-        gridLayout->addWidget(groupBox_3, 4, 0, 1, 1);
+        gridLayout->addWidget(tertiaryGroupBox, 4, 0, 1, 1);
 
-        groupBox_2 = new QGroupBox(SortDialog);
-        groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
+        secondaryGroupBox = new QGroupBox(SortDialog);
+        secondaryGroupBox->setObjectName(QStringLiteral("secondaryGroupBox"));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(40);
         sizePolicy1.setVerticalStretch(40);
-        sizePolicy1.setHeightForWidth(groupBox_2->sizePolicy().hasHeightForWidth());
-        groupBox_2->setSizePolicy(sizePolicy1);
-        label_7 = new QLabel(groupBox_2);
+        sizePolicy1.setHeightForWidth(secondaryGroupBox->sizePolicy().hasHeightForWidth());
+        secondaryGroupBox->setSizePolicy(sizePolicy1);
+        label_7 = new QLabel(secondaryGroupBox);
         label_7->setObjectName(QStringLiteral("label_7"));
         label_7->setGeometry(QRect(10, 24, 39, 16));
-        comboBox_7 = new QComboBox(groupBox_2);
+        comboBox_7 = new QComboBox(secondaryGroupBox);
         comboBox_7->addItem(QString());
         comboBox_7->setObjectName(QStringLiteral("comboBox_7"));
         comboBox_7->setGeometry(QRect(51, 25, 71, 20));
-        label_8 = new QLabel(groupBox_2);
+        label_8 = new QLabel(secondaryGroupBox);
         label_8->setObjectName(QStringLiteral("label_8"));
         label_8->setGeometry(QRect(12, 51, 32, 16));
-        comboBox_8 = new QComboBox(groupBox_2);
+        comboBox_8 = new QComboBox(secondaryGroupBox);
         comboBox_8->addItem(QString());
         comboBox_8->addItem(QString());
         comboBox_8->setObjectName(QStringLiteral("comboBox_8"));
         comboBox_8->setGeometry(QRect(51, 51, 101, 20));
 
-        gridLayout->addWidget(groupBox_2, 2, 0, 1, 1);
+        gridLayout->addWidget(secondaryGroupBox, 2, 0, 1, 1);
 
         QWidget::setTabOrder(comboBox, comboBox_2);
         QWidget::setTabOrder(comboBox_2, comboBox_7);
@@ -172,8 +172,8 @@ public:
         retranslateUi(SortDialog);
         QObject::connect(okButton, SIGNAL(clicked()), SortDialog, SLOT(accept()));
         QObject::connect(cancelButton, SIGNAL(clicked()), SortDialog, SLOT(reject()));
-        QObject::connect(moreButton, SIGNAL(toggled(bool)), groupBox_2, SLOT(setVisible(bool)));
-        QObject::connect(moreButton, SIGNAL(toggled(bool)), groupBox_3, SLOT(setVisible(bool)));
+        QObject::connect(moreButton, SIGNAL(toggled(bool)), secondaryGroupBox, SLOT(setVisible(bool)));
+        QObject::connect(moreButton, SIGNAL(toggled(bool)), tertiaryGroupBox, SLOT(setVisible(bool)));
 
         QMetaObject::connectSlotsByName(SortDialog);
     } // setupUi
@@ -192,7 +192,7 @@ public:
         comboBox_2->setItemText(0, QApplication::translate("SortDialog", "Ascending ", nullptr));
         comboBox_2->setItemText(1, QApplication::translate("SortDialog", "Descending", nullptr));
 
-        groupBox_3->setTitle(QApplication::translate("SortDialog", "&Tertiary Key", nullptr));
+        tertiaryGroupBox->setTitle(QApplication::translate("SortDialog", "&Tertiary Key", nullptr));
         label_9->setText(QApplication::translate("SortDialog", "Column:", nullptr));
         comboBox_9->setItemText(0, QApplication::translate("SortDialog", "None", nullptr));
 
@@ -200,7 +200,7 @@ public:
         comboBox_10->setItemText(0, QApplication::translate("SortDialog", "Ascending ", nullptr));
         comboBox_10->setItemText(1, QApplication::translate("SortDialog", "Descending", nullptr));
 
-        groupBox_2->setTitle(QApplication::translate("SortDialog", "&Secondary Key", nullptr));
+        secondaryGroupBox->setTitle(QApplication::translate("SortDialog", "&Secondary Key", nullptr));
         label_7->setText(QApplication::translate("SortDialog", "Column:", nullptr));
         comboBox_7->setItemText(0, QApplication::translate("SortDialog", "None", nullptr));
 
