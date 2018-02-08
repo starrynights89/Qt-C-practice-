@@ -114,6 +114,7 @@ public:
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(6);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
         okButton = new QPushButton(SortDialog);
         okButton->setObjectName(QStringLiteral("okButton"));
 
