@@ -13,7 +13,10 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit mainwindow(QWidget *parent = 0);
+    MainWindow();
+
+protected:
+    void closeEvent(QCloseEvent *event);
 };
 
 #endif // MAINWINDOW_H
