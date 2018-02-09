@@ -1,7 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "finddialog.h"
+#include "gotocelldialog.h"
+#include "sortdialog.h"
+#include "spreadsheet.h"
 
-mainwindow::mainwindow(QWidget *parent) :
+#include <QtWidgets>
+
+MainWindow::MainWindow(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::mainwindow)
 {
