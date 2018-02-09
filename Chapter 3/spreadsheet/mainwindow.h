@@ -17,6 +17,16 @@ public:
 
 protected:
     void closeEvent(QCloseEvent *event);
+
+private slots:
+    void newFile();
+    void open();
+    void save();
+    void saveAs();
+    void find();
+    void goToCell();
+    void sort();
+    void about();
 };
 
 #endif // MAINWINDOW_H
