@@ -63,5 +63,7 @@ void MainWindow::createActions()
     showGridAction->setStatusTip(tr("Show or hide the spreadsheet's grid"));
     connect(showGridAction, SIGNAL(toggled(bool)), spreadsheet, SLOT(setShowGrid(bool)));
 
-    
+    aboutQtAction = new QAction(tr("About &Qt"), this);
+    aboutQtAction->setStatusTip(tr("Show the Qt library's About box"));
+    connect(aboutQtAction, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
 }
