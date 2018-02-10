@@ -22,6 +22,15 @@ MainWindow::MainWindow()
 
     findDialog = 0;
 
-    setWindowIcon(QIcon("icon.png"));
+    setWindowIcon(QIcon(":/images/icon.png"));
     setCurrentFile("");
+}
+
+void MainWindow::createActions()
+{
+    newAction = new QAction(tr("&New"), this);
+    newAction->setIcon(QIcon(":/images/new.png"));
+    newAction->setShortcut(QKeySequence::New);
+    newAction->setStatusTip(tr("Create a new spreadsheet file"));
+    connect(newAction, SIGNAL(triggered()), this, SLOT(newFile()));
 }
