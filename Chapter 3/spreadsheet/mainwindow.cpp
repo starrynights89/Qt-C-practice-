@@ -45,8 +45,16 @@ void MainWindow::createActions()
                 this, SLOT(openRecentFile()));
     }
 
+    //action to close application
     exitAction = new QAction(tr("E&xit"), this);
     exitAction->setShortcut(tr("Ctrl+Q"));
     exitAction->setStatusTip(tr("Exit the application"));
     connect(exitAction, SIGNAL(triggered()), this, SLOT(close()));
+
+    //action to select all the cells in spreadsheet
+    selectAllAction = new QAction(tr("&All"), this);
+    selectAllAction->setShortcut(QKeySequence::SelectAll);
+    selectAllAction->setStatusTip(tr("Select all the cells in the spreadsheet"));
+    connect(selectAllAction, SIGNAL(triggered()), spreadsheet, SLOT(SelectAll()));
+
 }
