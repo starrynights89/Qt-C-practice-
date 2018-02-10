@@ -57,4 +57,11 @@ void MainWindow::createActions()
     selectAllAction->setStatusTip(tr("Select all the cells in the spreadsheet"));
     connect(selectAllAction, SIGNAL(triggered()), spreadsheet, SLOT(SelectAll()));
 
+    showGridAction = new QAction(tr("&Show Grid"), this);
+    showGridAction->setCheckable(true);
+    showGridAction->setChecked(spreadsheet->showGrid());
+    showGridAction->setStatusTip(tr("Show or hide the spreadsheet's grid"));
+    connect(showGridAction, SIGNAL(toggled(bool)), spreadsheet, SLOT(setShowGrid(bool)));
+
+    
 }
