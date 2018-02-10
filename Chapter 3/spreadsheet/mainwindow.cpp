@@ -33,9 +33,9 @@ void MainWindow::createActions()
     newAction->setShortcut(QKeySequence::New);
     newAction->setStatusTip(tr("Create a new spreadsheet file"));
     connect(newAction, SIGNAL(triggered()), this, SLOT(newFile()));
-    connect(newAction, SIGNAL(triggered()), this, SLOT(open()));
-    connect(newAction, SIGNAL(triggered()), this, SLOT(save()));
-    connect(newAction, SIGNAL(triggered()), this, SLOT(saveAs()));
+    connect(openAction, SIGNAL(triggered()), this, SLOT(open()));
+    connect(saveAction, SIGNAL(triggered()), this, SLOT(save()));
+    connect(saveAsAction, SIGNAL(triggered()), this, SLOT(saveAs()));
 
     for(int i=0; i<MaxRecentFiles; i++)
     {
@@ -66,4 +66,23 @@ void MainWindow::createActions()
     aboutQtAction = new QAction(tr("About &Qt"), this);
     aboutQtAction->setStatusTip(tr("Show the Qt library's About box"));
     connect(aboutQtAction, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
+}
+
+void MainWindow::createMenus()
+{
+    fileMenu = menuBar()->addMenu(tr("&File"));
+    fileMenu->addAction(newAction);
+    fileMenu->addAction(openAction);
+    fileMenu->addAction(saveAction);
+    fileMenu->addAction(saveAsAction);
+    seperatorAction = fileMenu->addSeparator();
+    
+    for(int i=0; i<MaxRecentFiles; i++)
+    {
+        fileMenu->addAction(recentFileActions[i]);
+    }
+
+    fileMenu->addSeparator();
+    fileMenu->addAction(exitAction);
+
 }
