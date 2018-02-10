@@ -22,6 +22,6 @@ MainWindow::MainWindow()
 
     findDialog = 0;
 
-    setWindowIcon(QIcon)
+    setWindowIcon(QIcon("icon.png"));
     setCurrentFile("");
 }
