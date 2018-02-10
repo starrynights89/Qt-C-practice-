@@ -7,14 +7,21 @@
 
 #include <QtWidgets>
 
-MainWindow::MainWindow(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::mainwindow)
+MainWindow::MainWindow()
 {
-    ui->setupUi(this);
-}
+    spreadsheet = new Spreadsheet;
+    setCentralWidget(spreadsheet);
 
-mainwindow::~mainwindow()
-{
-    delete ui;
+    createActions();
+    createMenus();
+    createContextMenu();
+    createToolBars();
+    createStatusBar();
+
+    readSettings();
+
+    findDialog = 0;
+
+    setWindowIcon(QIcon)
+    setCurrentFile("");
 }
