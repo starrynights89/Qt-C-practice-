@@ -33,4 +33,17 @@ void MainWindow::createActions()
     newAction->setShortcut(QKeySequence::New);
     newAction->setStatusTip(tr("Create a new spreadsheet file"));
     connect(newAction, SIGNAL(triggered()), this, SLOT(newFile()));
+    connect(newAction, SIGNAL(triggered()), this, SLOT(open()));
+    connect(newAction, SIGNAL(triggered()), this, SLOT(save()));
+    connect(newAction, SIGNAL(triggered()), this, SLOT(saveAs()));
+
+    for(int i=0; i<MaxRecentFiles; i++)
+    {
+        recentFileActions[i] = new QAction(this);
+        recentFileActions[i]->setVisible(false);
+        connect(recentFileActions[i], SIGNAL(triggered()),
+                this, SLOT(openRecentFile()));
+    }
+
+    
 }
