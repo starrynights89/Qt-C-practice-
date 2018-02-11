@@ -86,4 +86,17 @@ void MainWindow::createMenus()
     fileMenu->addAction(exitAction);
 
     editMenu = menuBar()->addMenu(tr(&"Edit"));
+    editMenu->addAction(cutAction);
+    editMenu->addAction(copyAction);
+    editMenu->addAction(pasteAction);
+    editMenu->addAction(deleteAction);
+
+    selectSubMenu = editMenu->addMenu(tr(&Select));
+    selectSubMenu->addAction(selectRowAction);
+    selectSubMenu->addAction(selectColumnAction);
+    selectSubMenu->addAction(selectAllAction);
+
+    editMenu->addSeparator();
+    editMenu->addAction(findAction);
+    editMenu->addAction(goToCellAction);
 }
