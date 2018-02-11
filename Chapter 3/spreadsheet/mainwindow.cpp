@@ -157,3 +157,9 @@ void MainWindow::createStatusBar()
             this, SLOT(spreadsheetModified()));
     updateStatusBar();
 }
+
+void MainWindow::updateStatusBar()
+{
+    locationLabel->setText(spreadsheet->currentLocation());
+    formulaLabel->setText(spreadsheet->currentFormula());
+}
