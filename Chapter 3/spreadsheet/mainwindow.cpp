@@ -99,4 +99,18 @@ void MainWindow::createMenus()
     editMenu->addSeparator();
     editMenu->addAction(findAction);
     editMenu->addAction(goToCellAction);
+
+    toolsMenu = menuBar()->addMenu(tr("&Tools"));
+    toolsMenu->addAction(recalculateAction);
+    toolsMenu->addAction(sortAction);
+
+    optionsMenu = menuBar()->addMenu(tr("&Options"));
+    optionsMenu->addAction(showGridAction);
+    optionsMenu->addAction(autoRecalAction);
+
+    menuBar()->addSeparator();
+
+    helpMenu = menuBar()->addMenu(tr("&Help"));
+    helpMenu->addAction(aboutAction);
+    helpMenu->addAction(aboutQtAction);
 }
