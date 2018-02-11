@@ -85,4 +85,5 @@ void MainWindow::createMenus()
     fileMenu->addSeparator();
     fileMenu->addAction(exitAction);
 
+    editMenu = menuBar()->addMenu(tr(&"Edit"));
 }
