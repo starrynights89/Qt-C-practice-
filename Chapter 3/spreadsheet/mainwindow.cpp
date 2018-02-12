@@ -227,3 +227,39 @@ bool MainWindow::loadFile(const QString &fileName)
     return true;
 }
 
+bool MainWindow::save()
+{
+    if(curFile.isEmpty())
+    {
+        return saveAs();
+    }
+    else
+    {
+        return saveFile(curFile);
+    }
+}
+
+bool MainWindow::saveFile(const QString &fileName)
+{
+    if(!spreadsheet->writeFile(fileName))
+    {
+        statusBar()->showMessage(tr("Saving canceled"), 2000);
+        return false;
+    }
+
+    setCurrentFile(fileName);
+    statusBar()->showMessage(tr("File saved"), 2000);
+    return true;
+}
+
+bool MainWindow::saveAs()
+{
+    QString fileName = QFileDialog::getSaveFileName(this,
+                                tr("Save Spreadsheet"), ".",
+                                tr("Spreadsheet files (*.sp)"));
+    if(fileName.isEmpty())
+    {
+        return false; 
+    }
+    return saveFile(fileName);
+}
