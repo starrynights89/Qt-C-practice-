@@ -226,3 +226,4 @@ bool MainWindow::loadFile(const QString &fileName)
     statusBar()->showMessage(tr("File loaded"), 2000);
     return true;
 }
+
