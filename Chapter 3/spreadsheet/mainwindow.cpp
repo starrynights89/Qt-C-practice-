@@ -163,3 +163,9 @@ void MainWindow::updateStatusBar()
     locationLabel->setText(spreadsheet->currentLocation());
     formulaLabel->setText(spreadsheet->currentFormula());
 }
+
+void MainWindow::spreadsheetModified()
+{
+    setWindowModified(true);
+    updateStatusBar();
+}
