@@ -213,3 +213,16 @@ void MainWindow::open()
         }
     }
 }
+
+bool MainWindow::loadFile(const QString &fileName)
+{
+    if(!spreadsheet->readFile(fileName))
+    {
+        statusBar()->showMessage(tr("Loading canceled"), 2000);
+        return false;
+    }
+
+    setCurrentFile(fileName);
+    statusBar()->showMessage(tr("File loaded"), 2000);
+    return true;
+}
