@@ -28,7 +28,10 @@ SOURCES += \
         mainwindow.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    finddialog.h \
+    gotocelldialog.h \
+    sortdialog.h
 
 FORMS += \
         mainwindow.ui
