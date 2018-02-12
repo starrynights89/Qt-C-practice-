@@ -199,3 +199,17 @@ bool MainWindow::okToContinue()
     }
     return true;
 }
+
+void MainWindow::open()
+{
+    if(okToContinue())
+    {
+        QString fileName = QFileDialog::getOpenFileName(this,
+                                    tr("Open Spreadsheet"), ".",
+                                    tr("Spreadsheet files (*.sp)"));
+        if(!fileName.isEmpty())
+        {
+            loadFile(fileName);
+        }
+    }
+}
