@@ -169,3 +169,12 @@ void MainWindow::spreadsheetModified()
     setWindowModified(true);
     updateStatusBar();
 }
+
+void MainWindow::newFile()
+{
+    if(okToContinue())
+    {
+        spreadsheet->clear();
+        setCurrentFile("");
+    }
+}
