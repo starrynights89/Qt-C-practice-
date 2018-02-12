@@ -115,7 +115,7 @@ void MainWindow::createMenus()
     helpMenu->addAction(aboutQtAction);
 }
 
-void MainWindow::createContextMenu
+void MainWindow::createContextMenu()
 {
     spreadsheet->addAction(cutAction);
     spreadsheet->addAction(copyAction);
