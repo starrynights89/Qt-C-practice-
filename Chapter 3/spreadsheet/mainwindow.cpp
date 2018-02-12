@@ -178,3 +178,24 @@ void MainWindow::newFile()
         setCurrentFile("");
     }
 }
+
+bool MainWindow::okToContinue()
+{
+    if(isWindowModified())
+    {
+        int r = QMessageBox::warning(this, tr("Spreadsheet"),
+                        tr("The document has been modified.\n"
+                            "Do you want to save your changes?"),
+                        QMessageBox::Yes | QMessageBox::No
+                        | QMessageBox::Cancel);
+        if(r==QMessageBox::Yes)
+        {
+            return save();
+        }
+        else if(r==QMessageBox::Cancel)
+        {
+            return false;
+        }
+    }
+    return true;
+}
