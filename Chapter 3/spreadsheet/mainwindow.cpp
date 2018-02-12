@@ -263,3 +263,16 @@ bool MainWindow::saveAs()
     }
     return saveFile(fileName);
 }
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    if(okToContinue())
+    {
+        writeSettings();
+        event->accept();
+    }
+    else
+    {
+        event->ignore();
+    }
+}
