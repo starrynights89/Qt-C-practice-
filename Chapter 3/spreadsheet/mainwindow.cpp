@@ -340,3 +340,23 @@ void MainWindow::openRecentFile()
         } 
     }
 }
+
+void MainWindow::find()
+{
+    if(!findDialog)
+    {
+        findDialog = new FindDialog(this);
+        connect(findDialog, SIGNAL(findNext(const QString &,
+                                            Qt::CaseSensitivity)),
+                spreadsheet, SLOT(findNext(const QString &,
+                                            Qt::CaseSensitivity)));
+        connect(findDialog, SIGNAL(findPrevious(const QString &,
+                                            Qt::CaseSensitivity)),
+                spreadsheet, SLOT(findPrevious(const QString &,
+                                            Qt::CaseSensitivity)));
+    }
+
+    findDialog->show();
+    findDialog->raise();
+    findDialog->activateWindow();
+}
