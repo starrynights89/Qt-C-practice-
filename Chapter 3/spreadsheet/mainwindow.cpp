@@ -276,3 +276,25 @@ void MainWindow::closeEvent(QCloseEvent *event)
         event->ignore();
     }
 }
+
+void MainWindow::setCurrentFile(const QString &fileName)
+{
+    curFile = fileName;
+    setWindowModified(false);
+    QString shownName = tr("Untitled");
+    if(!curFile.isEmpty())
+    {
+        shownName = strippedName(curFile);
+        recentFiles.removeAll(curFile);
+        recentFiles.prepend(curFile);
+        updateRecentFileActions();
+    }
+
+    setWindowTitle(tr("%1[*] - %2").arg(shownName)
+                                   .arg(tr("Spreadsheet"))); 
+}
+
+QString MainWindow::strippedName(const QString &fullFileName)
+{
+    return QFileInfo(fullFileName).fileName();
+}
