@@ -328,3 +328,15 @@ void MainWindow::updateRecentFileActions()
     }
     separatorAction->setVisible(!recentFiles.isEmpty());
 }
+
+void MainWindow::openRecentFile()
+{
+    if(okToContinue())
+    {
+        QAction *action = qobject_cast<QAction *>(sender());
+        if(action)
+        {
+            loadFile(action->data().toString());
+        } 
+    }
+}
