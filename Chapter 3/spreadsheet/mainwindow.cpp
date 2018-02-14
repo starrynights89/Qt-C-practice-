@@ -395,3 +395,13 @@ void MainWindow::about()
                "QStatusBar, QTableWidget, QToolBar, and many other "
                "Qt classes."));
 }
+
+void MainWindow::writeSettings()
+{
+    QSettings settings("Software Inc.", "Spreadsheet");
+
+    settings.setValue("geometry", saveGeometry());
+    settings.setValue("recentFiles", recentFiles);
+    settings.setValue("showGrid", showGridAction->isChecked());
+    settings.setValue("autoRecalc", autoRecalAction->isChecked());
+}
