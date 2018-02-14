@@ -363,13 +363,14 @@ void MainWindow::find()
 
 void MainWindow::goToCell()
 {
-    GoToCellDialog dialog(this);
-    if(dialog.exec())
+    GoToCellDialog *dialog = new GoToCellDialog(this);
+    if(dialog->exec())
     {
-        QString str = dialog.lineEdit->text().toUpper();
+        QString str = dialog->lineEdit->text().toUpper();
         spreadsheet->setCurrentCell(str.mid(1).toInt() - 1,
                                     str[0].unicode() - 'A');
     }
+    delete dialog;
 }
 
 void MainWindow::sort()
