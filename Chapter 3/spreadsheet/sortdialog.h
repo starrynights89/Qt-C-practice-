@@ -2,6 +2,7 @@
 #define SORTDIALOG_H
 
 #include <QDialog>
+#include "ui_mainwindow.h"
 
 class SortDialog : public QDialog, public Ui::SortDialog
 {

@@ -2,6 +2,7 @@
 #define GOTOCELLDIALOG_H
 
 #include <QDialog>
+#include "ui_mainwindow.h"
 
 class GoToCellDialog : public QDialog, public Ui::GoToCellDialog
 {

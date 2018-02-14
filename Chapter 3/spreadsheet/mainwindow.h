@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "finddialog.h"
+#include "ui_mainwindow.h"
 
 class QAction;
 class QLabel;
