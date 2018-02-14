@@ -3,7 +3,7 @@
 #include "finddialog.h"
 #include "gotocelldialog.h"
 #include "sortdialog.h"
-#include "spreadsheet.h"
+//#include "spreadsheet.h"
 
 #include <QtWidgets>
 

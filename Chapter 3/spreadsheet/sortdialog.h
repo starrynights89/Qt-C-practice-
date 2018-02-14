@@ -3,8 +3,6 @@
 
 #include <QDialog>
 
-#include "ui_sortdialog.h"
-
 class SortDialog : public QDialog, public Ui::SortDialog
 {
     Q_OBJECT

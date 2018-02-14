@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "finddialog.h"
 
 class QAction;
 class QLabel;
