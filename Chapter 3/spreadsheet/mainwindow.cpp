@@ -371,3 +371,28 @@ void MainWindow::goToCell()
                                     str[0].unicode() - 'A');
     }
 }
+
+void MainWindow::sort()
+{
+    SortDialog dialog(this);
+    QTableWidgetSelectionRange range = spreadsheet->selectRange();
+    dialog.setColumnRange('A' + range.leftColumn(),
+                          'A' + range.rightColumn());
+    if(dialog.exec())
+    {
+        SpreadsheetCompare compare;
+        compare.keys[0] =
+              dialog.primaryColumnCombo->currentIndex();
+        compare.keys[1] =
+              dialog.secondaryColumnCombo->currentIndex() - 1;
+        compare.keys[2] = 
+              dialog.tertiaryColumnCombo->currentIndex() - 1;
+        compare.ascending[0] = 
+              (dialog.primaryOrderCombo->currentIndex() == 0);
+        compare.ascending[1] = 
+              (dialog.secondaryOrderCombo->currentIndex() == 0);
+        compare.ascending[2] = 
+              (dialog.tertiaryOrderCombo->currentIndex() == 0);
+        spreadsheet->sort(compare);
+    }
+}
