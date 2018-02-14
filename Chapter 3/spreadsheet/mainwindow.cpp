@@ -3,7 +3,7 @@
 #include "finddialog.h"
 #include "gotocelldialog.h"
 #include "sortdialog.h"
-//#include "spreadsheet.h"
+#include "spreadsheet.h"
 
 #include <QtWidgets>
 
@@ -172,11 +172,8 @@ void MainWindow::spreadsheetModified()
 
 void MainWindow::newFile()
 {
-    if(okToContinue())
-    {
-        spreadsheet->clear();
-        setCurrentFile("");
-    }
+    MainWindow *mainWin = new MainWindow;
+    mainWin->show();
 }
 
 bool MainWindow::okToContinue()
