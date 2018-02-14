@@ -404,4 +404,25 @@ void MainWindow::writeSettings()
     settings.setValue("recentFiles", recentFiles);
     settings.setValue("showGrid", showGridAction->isChecked());
     settings.setValue("autoRecalc", autoRecalAction->isChecked());
+
+    settings.beginGroup("findDialog");
+    settings.setValue("matchCase", caseCheckBox->isChecked());
+    settings.setValue("searchBackward", backwardCheckBox->isChecked());
+    settings.endGroup();
+}
+
+void MainWindow::readSettings()
+{
+    QSettings settings("Software Inc.", "Spreadsheet");
+
+    restoreGeometry(settings.value("geometry").toByteArray());
+
+    recentFiles = settings.value("recentFiles").toStringList();
+    updateRecentFileActions();
+
+    bool showGrid = settings.value("showGrid", true).toBool();
+    showGridAction->setChecked(showGrid);
+
+    bool autoRecalc = settings.value("autoRecalc", true).toBool();
+    autoRecalAction->setChecked(autoRecalc);
 }
