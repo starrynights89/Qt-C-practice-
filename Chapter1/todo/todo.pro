@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-02-21T13:45:24
+# Project created by QtCreator 2018-02-21T15:49:04
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = TodoApp
+TARGET = todo
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,10 +25,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        widget.cpp
+        mainwindow.cpp
 
 HEADERS += \
-        widget.h
+        mainwindow.h
 
 FORMS += \
-        widget.ui
+        mainwindow.ui
