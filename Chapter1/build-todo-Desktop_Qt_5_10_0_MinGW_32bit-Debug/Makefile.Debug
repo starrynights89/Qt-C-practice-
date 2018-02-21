@@ -13,7 +13,7 @@ CC            = gcc
 CXX           = g++
 DEFINES       = -DUNICODE -D_UNICODE -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
 CFLAGS        = -fno-keep-inline-dllexport -g -Wextra -Wall -W $(DEFINES)
-CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++11 -Wextra -Wall -W -fexceptions -mthreads $(DEFINES)
+CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++1y -Wextra -Wall -W -fexceptions -mthreads $(DEFINES)
 INCPATH       = -I..\todo -I. -IC:\Qt\5.10.0\mingw53_32\include -IC:\Qt\5.10.0\mingw53_32\include\QtWidgets -IC:\Qt\5.10.0\mingw53_32\include\QtGui -IC:\Qt\5.10.0\mingw53_32\include\QtANGLE -IC:\Qt\5.10.0\mingw53_32\include\QtCore -Idebug -I. -IC:\Qt\5.10.0\mingw53_32\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
@@ -98,7 +98,7 @@ compiler_moc_predefs_make_all: debug/moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) debug\moc_predefs.h
 debug/moc_predefs.h: C:/Qt/5.10.0/mingw53_32/mkspecs/features/data/dummy.cpp
-	g++ -fno-keep-inline-dllexport -g -std=gnu++11 -Wextra -Wall -W -dM -E -o debug\moc_predefs.h C:\Qt\5.10.0\mingw53_32\mkspecs\features\data\dummy.cpp
+	g++ -fno-keep-inline-dllexport -g -std=gnu++1y -Wextra -Wall -W -dM -E -o debug\moc_predefs.h C:\Qt\5.10.0\mingw53_32\mkspecs\features\data\dummy.cpp
 
 compiler_moc_header_make_all: debug/moc_mainwindow.cpp
 compiler_moc_header_clean:
@@ -460,7 +460,45 @@ debug/mainwindow.o: ../todo/mainwindow.cpp ../todo/mainwindow.h \
 		C:/Qt/5.10.0/mingw53_32/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.10.0/mingw53_32/include/QtGui/qicon.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtCore/QVariant \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QAction \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qaction.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qactiongroup.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QApplication \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qapplication.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtCore/qeventloop.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtGui/qguiapplication.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtGui/qinputmethod.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QButtonGroup \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qbuttongroup.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QHeaderView \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qheaderview.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qframe.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qstyleoption.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtGui/qvalidator.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtCore/qregularexpression.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qslider.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qabstractslider.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qstyle.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qtabbar.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qrubberband.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QMenuBar \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qmenubar.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qmenu.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QStatusBar \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qstatusbar.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QToolBar \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qtoolbar.h \
+		C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\todo\mainwindow.cpp
 
 debug/moc_mainwindow.o: debug/moc_mainwindow.cpp 
