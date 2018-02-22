@@ -2,6 +2,7 @@
 #define TASK_H
 
 #include <QWidget>
+#include <QString>
 
 namespace Ui {
 class Task;
@@ -14,6 +15,10 @@ class Task : public QWidget
 public:
     explicit Task(QWidget *parent = 0);
     ~Task();
+
+    void setName(const QString &name);
+    QString name() const;
+    bool isCompleted() const;
 
 private:
     Ui::Task *ui;
