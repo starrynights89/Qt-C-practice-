@@ -17,14 +17,27 @@
    <widget class="QLabel" name="statusLabel">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>100</y>
-      <width>47</width>
-      <height>13</height>
+      <x>10</x>
+      <y>10</y>
+      <width>111</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Status: 0 todo/0 done</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addTaskButton">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>10</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add task</string>
     </property>
    </widget>
   </widget>
