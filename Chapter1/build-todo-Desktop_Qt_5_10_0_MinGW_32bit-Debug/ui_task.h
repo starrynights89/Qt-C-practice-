@@ -35,7 +35,7 @@ public:
     {
         if (Task->objectName().isEmpty())
             Task->setObjectName(QStringLiteral("Task"));
-        Task->resize(256, 184);
+        Task->resize(355, 184);
         horizontalLayout = new QHBoxLayout(Task);
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
@@ -68,7 +68,7 @@ public:
     void retranslateUi(QWidget *Task)
     {
         Task->setWindowTitle(QApplication::translate("Task", "Task", nullptr));
-        checkbox->setText(QApplication::translate("Task", "CheckBox", nullptr));
+        checkbox->setText(QApplication::translate("Task", "Buy Milk", nullptr));
         editButton->setText(QApplication::translate("Task", "Edit", nullptr));
         removeButton->setText(QApplication::translate("Task", "Remove", nullptr));
     } // retranslateUi
