@@ -36,5 +36,8 @@ void Task::rename()
 {
     bool ok;
     QString value = QInputDialog::getText(this, tr("Edit task"),
-                                          QLineEdit::Normal, this->name(),)
+                                          QLineEdit::Normal, this->name(), &ok);
+    if(ok && !value.isEmpty()) {
+        setName(value);
+    }
 }
