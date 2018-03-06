@@ -3,13 +3,16 @@
 
 #include <QInputDialog>
 
-Task::Task(QWidget *parent) :
+Task::Task(const QString& name, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Task)
 {
     ui->setupUi(this);
     setName(name);
     connect(ui->editButton, &QPushButton::clicked, this, &Task::rename);
+    connect(ui->removeButton, &QPushButton::clicked, [this] {
+        emit removed(this);
+    });
 }
 
 Task::~Task()
